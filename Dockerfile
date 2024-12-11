@@ -1,4 +1,7 @@
-FROM debian:buster
+# https://wiki.debian.org/LTS を参照したところdebian:busterがサポート切れ
+# bullseyeは2026年9月31日までサポート
+FROM debian:bullseye
+RUN apt-get update
 RUN apt-get update
 
 RUN apt-get update && apt-get install -y apt-transport-https lsb-release ca-certificates wget
